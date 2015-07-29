@@ -38,3 +38,20 @@
     border-width: 3px;
     border-color: #0654A6;
 }
+
+.title-table-row > th {
+    background-color: #AED000;
+    border: 0px !important;
+}
+
+.odd-table-row > th, .odd-table-row > td {
+    background-color: #CCCCCC;
+}
+
+.even-table-row > th, .even-table-row > td {
+    background-color: #E6E6E6;
+}
+
+.odd-table-row > th, .odd-table-row > td, .even-table-row > th, .even-table-row > td {
+    border: 2px solid #FFFFFF !important;
+}
