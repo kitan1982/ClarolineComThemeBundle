@@ -1,0 +1,101 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <div class="col-md-12">
+            <img src="{{ asset('uploads/customhome/pictures/technicalSupport/Banner.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+                 
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-1 first-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/technicalSupport/shutterstock_239914771.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-5 col-md-offset-1 first-row-text">
+            <h3 class="text-center first-row-text-title">
+                Support technique Forma-Libre
+            </h3>
+            <p class="first-row-text-content">
+                Vous hébergez votre propre plateforme Claroline Connect ? Soucieux de vous accompagner dans le déploiement de votre plateforme, Forma-Libre S.A. vous propose son service d'assistance technique. Nous vous proposons 4 offres de support technique.
+            </p>
+        </div>
+    </div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+                 
+    <div class="row second-row">
+        <br>
+        <br>
+        <div class="col-md-5 col-md-offset-1 second-row-text">
+            <h3 class="text-center second-row-text-title">
+                Choisissez l'offre de support qui vous convient 
+            </h3>
+            <p class="second-row-text-content">
+                Nos offres de support vous mettent en contact avec nos équipes de support ou de développement. Nous vous proposons 4 offres de support afin de correspondre à vos besoins spécifiques.
+            </p>
+        </div>
+        <div class="col-md-4 col-md-offset-1 second-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/technicalSupport/shutterstock_278570057.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+    <div class="row second-row-separator">
+        <br>
+        <br>
+    </div>
+                 
+    <div class="row third-row">
+        <br>
+        <br>
+        <div class="col-md-6 col-md-offset-3">
+            <img src="{{ asset('uploads/customhome/pictures/technicalSupport/tableau.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+                 width="100%"
+            >
+            <small>
+                <p>
+                    <sup>1</sup>
+                    Les offres de support n'incluent pas l'installation de composants, le développement sur mesure, la surveillance préventive, la formation ou la documentation.
+                </p>
+                <p>
+                    <sup>2</sup>
+                    jour ouvrable = du lundi au vendredi de 8h00 à 18h00 hors jours fériés.
+                </p>
+            </small>
+            <br>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-primary third-row-button">
+                    &nbsp;&nbsp;&nbsp;
+                    Souscrire
+                    &nbsp;&nbsp;&nbsp;
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row third-row-separator">
+        <br>
+        <br>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href="{{ asset('uploads/customhome/css/technicalSupport.css') }}"
+          type="text/css"
+    />
+{% endblock %}
