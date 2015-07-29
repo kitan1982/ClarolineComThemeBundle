@@ -1,0 +1,103 @@
+<div id="footer" class="invoice-footer">
+    <br>
+    <div class="col-md-12 row">
+        <div class="col-md-1">
+        </div>
+        
+        <div class="col-md-3">
+            <span class="invoice-footer-title">
+                {{ 'forma_libre_sa'|trans({}, 'theme') }}
+            </span>
+            <ul class="invoice-footer-ul list-unstyled">
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/A-propos">
+                        > {{ 'about'|trans({}, 'theme') }}
+                    </a>
+                </li>
+               {# <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Notre-equipe">
+                        > {{ 'our_team'|trans({}, 'theme') }}
+                    </a>
+                </li>#}
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.net">
+                        > {{ 'claroline_consortium'|trans({}, 'theme') }}
+                    </a>
+                </li>
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Contact">
+                        > {{ 'contact'|trans({}, 'theme') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+                    
+        <div class="col-md-1">
+        </div>
+                    
+        <div class="col-md-2">
+            <span class="invoice-footer-title">
+                {{ 'our_services'|trans({}, 'theme') }}
+            </span>
+            <ul class="invoice-footer-ul list-unstyled">
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Hebergement">
+                        > {{ 'hostings'|trans({}, 'theme') }}
+                    </a>
+                </li>
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Support">
+                        > {{ 'supports'|trans({}, 'theme') }}
+                    </a>
+                </li>
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Formations">
+                        > {{ 'trainings'|trans({}, 'theme') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+            
+        <div class="col-md-1">
+        </div>
+                    
+        <div class="col-md-3">
+            <span class="invoice-footer-title">
+                {{ 'custom_services'|trans({}, 'theme') }}
+            </span>
+            <ul class="invoice-footer-ul list-unstyled">
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Developpement_specifique">
+                        > {{ 'specific_development'|trans({}, 'theme') }}
+                    </a>
+                </li>
+                <li class="invoice-footer-li margin-left-md">
+                    <a href="http://claroline.com/type/Consultance">
+                        > {{ 'consulting'|trans({}, 'theme') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="invoice-footer-infos" class="col-md-12 row">
+        <small>
+            <div class="invoice-footer-info center-text">
+                {{ 'forma_libre_info_1'|trans({}, 'theme') }}
+            </div>
+            <div class="invoice-footer-info center-text">
+                {{ 'forma_libre_info_2'|trans({}, 'theme') }}
+            </div>
+            <div class="invoice-footer-info center-text">
+                {{ 'forma_libre_info_3'|trans({}, 'theme') }}
+            </div>
+        </small>
+    </div>
+    <br>
+</div>
+
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="{{ asset('bundles/formalibreclarolinecomtheme/css/footer.css') }}"
+          type="text/css"
+    />
+{% endblock %}

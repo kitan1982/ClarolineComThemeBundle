@@ -1,0 +1,5 @@
+plugin:
+    has_options: false
+
+    themes:
+        - name: "Claroline.com Theme"
