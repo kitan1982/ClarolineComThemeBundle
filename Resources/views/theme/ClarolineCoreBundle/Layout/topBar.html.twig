@@ -56,6 +56,15 @@
                             <div class="invoice-topbar-navbar-center-title-underline">
                             </div>
                         </li>
+                        <li class="invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
+                            data-name="{{ 'my_workspaces'|trans({}, 'theme') }}"
+                        >
+                            <a href="{{ path('formalibre_my_shared_workspaces_desktop_tool_index') }}">
+                                {{ 'my_workspaces'|trans({}, 'theme') }}
+                            </a>
+                            <div class="invoice-topbar-navbar-center-title-underline">
+                            </div>
+                        </li>
                     {% else %}
                         <li class="invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
                             data-name="{{ 'home'|trans({}, 'platform') }}"

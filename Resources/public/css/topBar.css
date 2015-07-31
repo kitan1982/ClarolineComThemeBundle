@@ -77,3 +77,8 @@
 #invoice-topbar-navbar-right .dropdown-menu {
     background-color: #CECECE;
 }
+
+.btn-primary {
+    background-color: #343b41;
+    border-color: #343b41;
+}
