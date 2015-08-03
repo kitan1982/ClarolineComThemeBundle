@@ -1,0 +1,152 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/fonctionalSupport/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
+    </div>
+
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-3 first-row-image">
+            <img src= "{{ asset('uploads/customhome/pictures/fonctionalSupport/shutterstock_244990333.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-4 first-row-text">
+            <h3 class="text-center first-row-text-title">
+                Nous r&eacutepondons &agrave vos questions
+            </h3>
+            <p class="first-row-text-content">
+                Forma-Libre vous accompagne dans votre utilisation quotidienne de Claroline Connect que ce soit pour r&eacutepondre &agrave vos questions, pour vous assistez dans l'administration de votre plateforme ou dans l'usage des outils Claroline. L'&eacutequipe de support fonctionnel  est &agrave votre disposition pour toutes vos demandes.
+            </p>
+        </div>
+    </div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="row second-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-3 second-row-text">
+            <h3 class="text-center second-row-text-title">
+                Un conseil personnalis&eacute pour votre usage
+            </h3>
+            <p class="second-row-text-content">
+                Notre offre de support fonctionnel couvre les domaines suivants: <br> - Param&eacutetrage de la plateforme <br> - Adaptation de la charte graphique <br> - Conseils sur la cr&eacuteation de contenu <br> Administration des participants <br> Utilisation des outils.
+            </p>
+        </div>
+        <div class="col-md-3 second-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/fonctionalSupport/shutterstock_147926675.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+    <div class="row second-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="row third-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-3 third-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/fonctionalSupport/shutterstock_248781373.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-4 third-row-text">
+            <h3 class="text-center third-row-text-title">
+                Nos offres de d&eacutemarrage
+            </h3>
+            <p class="third-row-text-content">
+                Forma-Libre a cr&eacute&eacute 2 offres qui vous simplifient la prise en main de la plateforme ou de votre espace d'activit&eacute: <br> - Adaptation graphique <br> - Administration de base
+            </p>
+        </div>
+    </div>
+    <div class="row third-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="row forth-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-4 forth-row-text">
+            <h3 class="text-center forth-row-text-title">
+			     Cr&eacutedits et utilisations
+			</h3>
+			<p class="forth-row-text-content">
+				Forma-Libre vous garantit une prise en charge 1j ouvrable apr&egraves la r&eacuteception de votre demande.
+				<br>
+				Vos cr&eacutedits sont utilis&eacutes pendant la dur&eacutee du traitement de votre dossier.
+				<br>
+				Vos cr&eacutedits sont utilis&eacutes comme suit:
+				<br>
+					- 4 cr&eacutedits de l'heure pour une intervention d'un de nos ing&eacutenieurs p&eacutedagogiques
+					<br>
+					- 5 cr&eacutedits de l'heure pour une internvention d'une de nos chefs de projet.
+					<br>
+					- Tout quart d'heure entam&eacute est comptabilis&eacute.
+			</p>
+        </div>
+ 
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <br>
+                <br>
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Cr&eacutedits</th>
+                            <th class="text-center">Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20</td>
+                            <td>250 &euro;</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>600 &euro;</td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>1000 &euro;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="{{ path('formalibre_support_credits_products_purchase_form') }}"
+                       class="btn btn-primary forth-row-button"
+                    >
+                        &nbsp;&nbsp;&nbsp;
+                        Souscrire
+                        &nbsp;&nbsp;&nbsp;
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row forth-row-separator">
+            <br>
+            <br>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href="{{ asset('uploads/customhome/css/fonctionalSupport.css') }}"
+          type="text/css"
+    />
+{% endblock %}

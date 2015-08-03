@@ -1,17 +1,17 @@
 .banner-row {
-    background-color: #B5C5C4;
+    background-color: #58b8db;
 }
 
 .first-row, .first-row-separator {
-    background-color: #E2E2E2;
+    background-color: #FFFFFF;
 }
 
 .second-row, .second-row-separator {
-    background-color: #B5C5C4;
+    background-color: #09273C;
 }
 
 .third-row, .third-row-separator {
-    background-color: #E2E2E2;
+    background-color: #FFFFFF;
 }
 
 .first-row-text-title {
@@ -19,15 +19,15 @@
 }
 
 .second-row-text-title {
-    color: #FFFFFF;
+    color: #A2C415;
 }
 
 .first-row-text-content {
-    color: #7BA09E;
+    color: #09273C;
 }
 
 .second-row-text-content {
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .third-row-button {

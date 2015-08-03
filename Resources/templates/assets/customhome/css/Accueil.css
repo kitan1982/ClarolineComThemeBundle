@@ -1,0 +1,15 @@
+.banner-row {
+    background-color: #FFFFFF;
+}
+
+.first-row, .first-row-separator {
+    background-color: #DFDFDF;
+}
+
+.first-row-text-title {
+    color: #A2C415;
+}
+
+.first-row-text-content {
+    color: #C3C3C3;
+}

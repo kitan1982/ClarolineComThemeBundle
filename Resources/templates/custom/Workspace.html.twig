@@ -1,0 +1,122 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/Workspace/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
+    </div>
+
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-3 first-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/Workspace/shutterstock_261044576.jpg')}}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-4 first-row-text">
+            <h3 class="text-center first-row-text-title">
+                Diffuser vos contenus
+            </h3>
+			<br>
+            <p class="first-row-text-content">
+                Forma-Libre vous donne acc&egraves &agrave un espace d'activit&eacute qui vous permettra de diffuser vos contenus aux utilisateurs de votre espace.<br> Forma-Libre garantit la maintenance et la s&eacutecurisation de espace d'activit&eacute.<br> Vous profiterez des mises &agrave jours de Claroline Connect une fois celles-ci publi&eacutees.
+            </p>
+        </div>
+    </div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="row second-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-3 second-row-text">
+            <h3 class="text-center second-row-text-title">
+                Un environnement personnalis&eacute
+            </h3>
+			<br>
+            <p class="second-row-text-content">
+                Votre espace d'activit&eacute vous donne acc&egraves &agrave un espace personnel que vous pouvez configurer &agrave votre guise. Vous d&eacutecidez de l'aspect visuel de votre espace personnel et s&eacutelectionnez les formations ou contenus que vous voulez y voir appara&icirctre.
+				</p>
+        </div>
+        <div class="col-md-3 second-row-image">
+            <img src=" {{ asset('uploads/customhome/pictures/Workspace/shutterstock_238382980.jpg')}}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+
+   <div class="row second-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <br>
+            <br>
+            <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Caract&eacuteristique</th>
+                    <th>D&eacutecouverte</th>
+                    <th>Light</th>
+                    <th>Regular</th>
+                    <th>Pro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Utilisateurs actifs</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>75</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Espace de stockage</td>
+                    <td>100 Mb</td>
+                    <td>1 Gb</td>
+                    <td>10 Gb</td>
+                    <td>100 Gb</td>
+                </tr>
+                <tr>
+                    <td>Nombre de ressources</td>
+                    <td>10</td>
+                    <td>300</td>
+                    <td>1.000</td>
+                    <td>10.000</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <div class="text-center">
+                <a class="btn btn-primary third-row-button" href="http://claroline.com/type/your_workspace" role="button">
+                    &nbsp;&nbsp;&nbsp;
+                    Souscrire
+                    &nbsp;&nbsp;&nbsp;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row forth-row-separator">
+        <br>
+        <br>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href="{{ asset('uploads/customhome/css/Workspace.css') }}"
+          type="text/css"
+    />
+{% endblock %}

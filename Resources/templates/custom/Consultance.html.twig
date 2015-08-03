@@ -1,0 +1,83 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/Consultance/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
+    </div>
+                 
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-3 first-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/Consultance/shutterstock_246297748.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-4 first-row-text">
+            <h3 class="text-center first-row-text-title">
+                Conseils en strat&eacutegie e-learning
+            </h3>
+			<br>
+            <p class="first-row-text-content">
+                Vous souhaitez faire &eacutevoluer vos formations en e-learning ou vous souhaitez d&eacutevelopper de nouvelles formations e-learning? Forma-Libre vous conseil dans les diff&eacuterentes &eacutetapes de leurs &eacutelaboration.<br> De l'analsye de vos besoins &agrave la mise en place de votre strat&eacutegie en passant par la r&eacutealisation des contenus, nous nous tenons &agrave vos c&ocirct&eacutes tout au long de la mise en place de votre projet. 
+            </p>
+        </div>
+    </div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+                 
+    <div class="row second-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-3 second-row-text">
+            <h3 class="text-center second-row-text-title">
+                R&eacutealisation de vos E-learning.
+            </h3>
+			<br>
+            <p class="second-row-text-content">
+                Forma-Libre vous propose de r&eacutealiser vos E-learning sur mesure. Forma-Libre analyse vos besoins et vos objectifs, vous propose un plan strat&eacutegique d'&eacutelaboration de votre e-learning.<br> Le plan strat&eacutegique d&eacutefini et valid&eacute, nous d&eacuteveloppons votre e-learning de son sc&eacutenario &agrave ses contenus.
+				</p>
+        </div>
+        <div class="col-md-3 second-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/Consultance/shutterstock_181840031.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+   
+   <div class="row second-row-separator">
+        <br>
+        <br>
+    </div>
+				
+    <div class="row forth-row">
+        <br>
+        <br>
+        <div class="text-center">
+            <button class="btn btn-primary third-row-button">
+                &nbsp;&nbsp;&nbsp;
+                Nous contacter
+                &nbsp;&nbsp;&nbsp;
+            </button>
+        </div>
+    </div>
+    <div class="row forth-row-separator">
+        <br>
+        <br>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href="{{ asset('uploads/customhome/css/Consultance.css') }}"
+          type="text/css"
+    />
+{% endblock %}

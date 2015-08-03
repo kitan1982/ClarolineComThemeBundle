@@ -1,30 +1,29 @@
 {% extends 'ClarolineCoreBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="row banner-row">
-        <div class="col-md-12">
-            <img src="{{ asset('uploads/customhome/pictures/technicalSupport/Banner.jpg') }}"
-                 class="img-responsive"
-                 alt="Responsive image"
-            >
-        </div>
+     <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/technicalSupport/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
     </div>
-                 
+
     <div class="row first-row">
         <br>
         <br>
-        <div class="col-md-4 col-md-offset-1 first-row-image">
+        <div class="col-md-3 col-md-offset-3 first-row-image">
             <img src="{{ asset('uploads/customhome/pictures/technicalSupport/shutterstock_239914771.jpg') }}"
                  class="img-responsive"
                  alt="Responsive image"
             >
         </div>
-        <div class="col-md-5 col-md-offset-1 first-row-text">
+        <div class="col-md-4 first-row-text">
             <h3 class="text-center first-row-text-title">
                 Support technique Forma-Libre
             </h3>
+			<br>
             <p class="first-row-text-content">
-                Vous hébergez votre propre plateforme Claroline Connect ? Soucieux de vous accompagner dans le déploiement de votre plateforme, Forma-Libre S.A. vous propose son service d'assistance technique. Nous vous proposons 4 offres de support technique.
+                Vous h&eacute;bergez votre propre plateforme Claroline Connect ? Soucieux de vous accompagner dans le d&eacuteploiement de votre plateforme, Forma-Libre vous propose son service d'assistance technique. Nous vous proposons 4 offres de support technique.
             </p>
         </div>
     </div>
@@ -32,19 +31,20 @@
         <br>
         <br>
     </div>
-                 
+
     <div class="row second-row">
         <br>
         <br>
-        <div class="col-md-5 col-md-offset-1 second-row-text">
+        <div class="col-md-4 col-md-offset-3 second-row-text">
             <h3 class="text-center second-row-text-title">
-                Choisissez l'offre de support qui vous convient 
+                Choisisser l'offre de support qui vous convient
             </h3>
+			<br>
             <p class="second-row-text-content">
-                Nos offres de support vous mettent en contact avec nos équipes de support ou de développement. Nous vous proposons 4 offres de support afin de correspondre à vos besoins spécifiques.
+                Nos offres de support vous mettent en contact avec nos &eacutequipes de support ou de d&eacuteveloppement. Nous vous proposons 4 offres de support afin de correspondre &agrave vos besoins sp&eacutecifiques.
             </p>
         </div>
-        <div class="col-md-4 col-md-offset-1 second-row-image">
+        <div class="col-md-3 second-row-image">
             <img src="{{ asset('uploads/customhome/pictures/technicalSupport/shutterstock_278570057.jpg') }}"
                  class="img-responsive"
                  alt="Responsive image"
@@ -55,215 +55,104 @@
         <br>
         <br>
     </div>
-                 
-    <div class="row third-row">
+
+
+    <div class="row forth-row">
         <br>
         <br>
         <div class="col-md-8 col-md-offset-2">
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <tr class="title-table-row">
-                        <th colspan="5">
-                            <h2>
-                                Caractéristiques des supports<sup>1</sup>
-                            </h2>
-                        </th>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Caract&eacuteristique</th>
+                        <th>Bronze</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
+                        <th>Membres effectifs</th>
                     </tr>
-                    <tr class="title-table-row">
-                        <th></th>
-                        <th class="text-center">
-                            Bronze
-                        </th>
-                        <th class="text-center">
-                            Silver
-                        </th>
-                        <th class="text-center">
-                            Gold
-                        </th>
-                        <th class="text-center">
-                            Membres effectifs
-                        </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Contact via</td>
+                        <td>Mail</td>
+                        <td>Mail/t&eacutel&eacutephone</td>
+                        <td>Mail/t&eacutel&eacutephone</td>
+                        <td>Mail/t&eacutel&eacutephone</td>
                     </tr>
-                    <tr class="odd-table-row">
-                        <th class="text-center">
-                            Contact via
-                        </th>
-                        <td class="text-center">
-                            Mail
-                        </td>
-                        <td class="text-center">
-                            Mail / Téléphone
-                        </td>
-                        <td class="text-center">
-                            Mail / Téléphone
-                        </td>
-                        <td class="text-center">
-                            Mail / Téléphone
-                        </td>
+                    <tr>
+                        <td>Prise en charge</td>
+                        <td>1j ouvrable</td>
+                        <td>4heures ouvrables</td>
+                        <td>7/24</td>
+                        <td>7/24</td>
                     </tr>
-                    <tr class="even-table-row">
-                        <th class="text-center">
-                            Prise en charge
-                        </th>
-                        <td class="text-center">
-                            1j ouvrable<sup>2</sup>
-                        </td>
-                        <td class="text-center">
-                            4h ouvrables<sup>2</sup>
-                        </td>
-                        <td class="text-center">
-                            7/24
-                        </td>
-                        <td class="text-center">
-                            7/24
-                        </td>
+                    <tr>
+                        <td>Multi-serveur</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                    <tr>
+                        <td>Correctifs</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
                     </tr>
-                    <tr class="odd-table-row">
-                        <th class="text-center">
-                            Multi-serveur
-                        </th>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
+                    <tr>
+                        <td>Notifications</td>
+                        <td>S&eacutecurit&eacute</td>
+                        <td>S&eacutecurit&eacute</td>
+                        <td>S&eacutecurit&eacute / Correctifs</td>
+                        <td>S&eacutecurit&eacute / Correctifs</td>
                     </tr>
-                    <tr class="even-table-row">
-                        <th class="text-center">
-                            Correctif
-                        </th>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
+                    <tr>
+                        <td>Incidents inclus</td>
+                        <td>20 cr&eacutedits</td>
+                        <td>50 cr&eacutedits</td>
+                        <td>100 cr&eacutedits</td>
+                        <td>200 cr&eacutedits</td>
                     </tr>
-                    <tr class="odd-table-row">
-                        <th class="text-center">
-                            Notification
-                        </th>
-                        <td class="text-center">
-                            Sécurité
-                        </td>
-                        <td class="text-center">
-                            Sécurité
-                        </td>
-                        <td class="text-center">
-                            Sécurité / Correctifs
-                        </td>
-                        <td class="text-center">
-                            Sécurité / Correctifs
-                        </td>
+                    <tr>
+                        <td>Annual Health Check</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
                     </tr>
-                    <tr class="even-table-row">
-                        <th class="text-center">
-                            Incidents inclus
-                        </th>
-                        <td class="text-center">
-                            20 crédits
-                        </td>
-                        <td class="text-center">
-                            50 crédits
-                        </td>
-                        <td class="text-center">
-                            100 crédits
-                        </td>
-                        <td class="text-center">
-                            100 crédits
-                        </td>
+                    <tr>
+                        <td>Personne d&eacutedi&eacutee</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
                     </tr>
-                    <tr class="odd-table-row">
-                        <th class="text-center">
-                            Annual Health check
-                        </th>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            1/an
-                        </td>
-                        <td class="text-center">
-                            1/an
-                        </td>
+                    <tr>
+                        <td>Support d&eacuteveloppeur</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
                     </tr>
-                    <tr class="even-table-row">
-                        <th class="text-center">
-                            Personne dédiée
-                        </th>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
+                    <tr>
+                        <td>Les prix</td>
+                        <td>500 &euro;</td>
+                        <td>3000 &euro;</td>
+                        <td>6000 &euro</td>
+                        <td>/<td>
                     </tr>
-                    <tr class="odd-table-row">
-                        <th class="text-center">
-                            Support développeur
-                        </th>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Non
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
-                        <td class="text-center">
-                            Oui
-                        </td>
-                    </tr>
-                    <tr class="even-table-row">
-                        <th class="text-center">
-                            Prix
-                        </th>
-                        <td class="text-center">
-                            500€
-                        </td>
-                        <td class="text-center">
-                            3000€
-                        </td>
-                        <td class="text-center">
-                            6000€
-                        </td>
-                        <td class="text-center">
-                            /
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                </tbody>
+            </table>
+       <br>
+       <br>
             <small>
                 <p>
                     <sup>1</sup>
-                    Les offres de support n'incluent pas l'installation de composants, le développement sur mesure, la surveillance préventive, la formation ou la documentation.
+                    Les offres de support n'incluent pas l'installation de composants, le d&eacuteveloppement sur mesure, la surveillance pr&eacuteventive, la formation ou la documentation.
                 </p>
                 <p>
                     <sup>2</sup>
-                    jour ouvrable = du lundi au vendredi de 8h00 à 18h00 hors jours fériés.
+                    jour ouvrable = du lundi au vendredi de 8h00 à 18h00 hors jours f&eacuteri&eacutes.
                 </p>
             </small>
             <br>
@@ -271,7 +160,7 @@
             <div class="text-center">
                 <button class="btn btn-primary third-row-button">
                     &nbsp;&nbsp;&nbsp;
-                    Souscrire
+                    Souscrire (&agrave; venir)
                     &nbsp;&nbsp;&nbsp;
                 </button>
             </div>
