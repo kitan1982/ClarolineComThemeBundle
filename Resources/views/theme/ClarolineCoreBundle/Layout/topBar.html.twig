@@ -69,7 +69,7 @@
                         <li class="invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
                             data-name="{{ 'home'|trans({}, 'platform') }}"
                         >
-                            <a href="http://claroline.com">
+                            <a href="{{ path('claro_index') }}">
                                 {{ 'home'|trans({}, 'platform') }}
                             </a>
                             <div class="invoice-topbar-navbar-center-title-underline">
@@ -85,12 +85,12 @@
                             </div>
                             <ul class="dropdown-menu invoice-topbar-navbar-center-dropdown-menu">
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://claroline.com/type/espace_d_activite">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'espace_d_activite'}) }}">
                                         {{ 'workspace'|trans({}, 'platform') }}
                                     </a>
                                 </li>
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://claroline.com/type/Campus">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'Campus'}) }}">
                                         {{ 'campus'|trans({}, 'theme') }}
                                     </a>
                                 </li>
@@ -106,12 +106,12 @@
                             </div>
                             <ul class="dropdown-menu invoice-topbar-navbar-center-dropdown-menu">
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://claroline.com/type/Support_technique">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'Support_technique'}) }}">
                                         {{ 'technical_support'|trans({}, 'theme') }}
                                     </a>
                                 </li>
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://http://claroline.com/type/Support_fonctionnel">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'Support_fonctionnel'}) }}">
                                         {{ 'functional_support'|trans({}, 'theme') }}
                                     </a>
                                 </li>
@@ -127,12 +127,12 @@
                             </div>
                             <ul class="dropdown-menu invoice-topbar-navbar-center-dropdown-menu">
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://claroline.com/type/E-learning">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'E-learning'}) }}">
                                         {{ 'our_elearning'|trans({}, 'theme') }}
                                     </a>
                                 </li>
                                 <li class="invoice-topbar-navbar-center-dropdown-item">
-                                    <a href="http://claroline.com/type/Nos_parcours">
+                                    <a href="{{ path('claro_get_content_by_type', {'type': 'Nos_parcours'}) }}">
                                         {{ 'our_learning_paths'|trans({}, 'theme') }}
                                     </a>
                                 </li>
@@ -141,7 +141,7 @@
                         <li class="dropdown invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
                             data-name="{{ 'contact'|trans({}, 'theme') }}"
                         >
-                            <a href="http://claroline.com/type/Contact">
+                            <a href="{{ path('claro_get_content_by_type', {'type': 'Contact'}) }}">
                                 {{ 'contact'|trans({}, 'theme') }}
                             </a>
                             <div class="invoice-topbar-navbar-center-title-underline">
