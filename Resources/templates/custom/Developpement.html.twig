@@ -1,0 +1,78 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/Developpement/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
+    </div>
+                 
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-3 first-row-image">
+            <img src= "{{ asset('uploads/customhome/pictures/Developpement/shutterstock_221585092.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+        <div class="col-md-4 first-row-text">
+            <h3 class="text-center first-row-text-title">
+                Besoin de fonctionnalit&eacutes sp&eacutecifiques.
+            </h3>
+            <p class="first-row-text-content">
+                Forma-Libre vous propose de d&eacutevelopper toutes les fonctionnalit&eacutes sp&eacutecifiques dont vous avez besoin pour vos formations ou votre organisation.<br> La structure de Claroline Connect permet de d&eacutevelopper rapidement et simplement tous types de fonctionnalit&eacutes.
+            </p>
+        </div>
+    </div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+                 
+    <div class="row second-row">
+        <br>
+        <br>
+        <div class="col-md-4 col-md-offset-3 second-row-text">
+            <h3 class="text-center second-row-text-title">
+                Une gestion de projet agile.
+            </h3>
+            <p class="second-row-text-content">
+                Forma-Libre utilise la m&eacutethode Scrum pour sa gestion de projet. <br> Scrum est un sch&eacutema d'organisation de d&eacuteveloppement de produits complexes. Cette m&eacutethode de gestion de projet s'appuie sur trois piliers qui sont:<br> - La transparence <br> - L'inspection <br> - L'adaptation <br>L'utilisation de Scrum permet: <br> - Une meilleure vue d'ensemble du projet <br> - Une participation active du client tout au long du processus de d&eacuteveloppement <br> - Une mise &agrave jour des priorit&eacutes
+            </p>
+		</div>
+		<div class="col-md-3 second-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/Developpement/shutterstock_271150745.jpg') }}"
+                 class="img-responsive"
+                 alt="Responsive image"
+            >
+        </div>
+    </div>
+    <div class="row second-row-separator">
+        <br>
+        <br>
+    </div>
+
+    <div class="text-center">
+        <br>
+        <br>
+        <button class="btn btn-primary forth-row-button">
+            &nbsp;&nbsp;&nbsp;
+            Nous contacter
+            &nbsp;&nbsp;&nbsp;
+        </button>
+    </div>
+    <div class="row forth-row-separator">
+        <br>
+        <br>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href=" {{asset('uploads/customhome/css/Developpement.css') }}"
+          type="text/css"
+    />
+{% endblock %}

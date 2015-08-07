@@ -1,0 +1,38 @@
+.banner-row {
+    background-color: #93B2DA;
+}
+
+.first-row, .first-row-separator {
+    background-color: #FFFFFF;
+}
+
+.second-row, .second-row-separator {
+    background-color: #93B2DA;
+}
+
+.third-row, .third-row-separator {
+    background-color: #FFFFFF;
+}
+
+.first-row-text-title {
+    color: #93B2DA;
+}
+
+.second-row-text-title {
+    color: #FFFFFF;
+}
+
+.first-row-text-content {
+    color: #93B2DA;
+}
+
+.second-row-text-content {
+    color: #FFFFFF;
+}
+
+.third-row-button {
+    font-size: 200%;
+    color:  #FFFFFF;
+    background-color: #59B0F2;
+    border-style: solid;
+}
