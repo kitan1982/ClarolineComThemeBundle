@@ -1,0 +1,4 @@
+formalibre_claroline_com_theme_bundle:
+    resource: "@FormaLibreClarolineComThemeBundle/Controller/"
+    type:     annotation
+    prefix:   /
