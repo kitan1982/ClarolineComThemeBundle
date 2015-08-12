@@ -93,3 +93,7 @@
     background-color: #3B4147;
     border-color: #3B4147;
 }
+
+body.iframe #invoice_top_bar {
+    display: none;
+}
