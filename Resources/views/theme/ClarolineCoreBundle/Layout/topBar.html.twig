@@ -35,7 +35,7 @@
                 </span>#}
             </div>
             <div id="invoice-topbar-navbar-center" class="navbar-collapse collapse col-md-offset-2">
-                
+
                 <ul id="invoice-topbar-navbar-center-list" class="nav navbar-nav">
                     {% if isLogged %}
                         <li class="invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
@@ -61,6 +61,15 @@
                         >
                             <a href="{{ path('formalibre_my_shared_workspaces_desktop_tool_index') }}">
                                 {{ 'my_workspaces'|trans({}, 'theme') }}
+                            </a>
+                            <div class="invoice-topbar-navbar-center-title-underline">
+                            </div>
+                        </li>
+                        <li class="invoice-topbar-navbar-center-title invoice-topbar-navbar-center-title-link"
+                            data-name="{{ 'my_orders'|trans({}, 'theme') }}"
+                        >
+                            <a href="{{ path('formalibre_my_orders_desktop_tool_index') }}">
+                                {{ 'my_orders'|trans({}, 'theme') }}
                             </a>
                             <div class="invoice-topbar-navbar-center-title-underline">
                             </div>
@@ -153,11 +162,11 @@
                 <ul id="invoice-topbar-navbar-right" class="nav navbar-nav navbar-right">
                     {% if isLogged %}
                         {% import _self as topbar %}
-                        
+
                         {% if adminTools|length > 0 %}
                             {{ topbar.item({'name':'administration', 'dropdown':block('dropdownAdministration')}) }}
                         {% endif %}
-                        
+
                         {% set username = app.user.firstName ~ ' ' ~ app.user.lastName %}
                         {% set user = username | length > 16 ? username | slice(0, 16) ~ '...' : username %}
                         {{ topbar.item({'name':user, 'icon':'user', 'route':'/profile', 'dropdown':block('dropdownLogged')}) }}
@@ -181,11 +190,11 @@
             </div>
         </div>
     </div>
-                
+
     {% block dropdownAdministration %}
         <ul class="dropdown-menu" role="menu">
             {% for tool in adminTools %}
-                {{ 
+                {{
                     topbar.item({
                         'name': tool.getName()|trans({}, 'tools'),
                         'href': path('claro_admin_open_tool', {'toolName': tool.getName() }),
@@ -211,4 +220,3 @@
           type="text/css"
     />
 {% endblock %}
-
