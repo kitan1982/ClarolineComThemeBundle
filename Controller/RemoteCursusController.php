@@ -38,6 +38,7 @@ class RemoteCursusController extends Controller
     {
         $roots = array();
         $cursusChildren = array();
+        $levelMax = array();
         $allCursus = $this->cursusApiManager->getRemoteCursus($this->campusName);
 
         foreach ($allCursus as $cursus) {
@@ -56,8 +57,13 @@ class RemoteCursusController extends Controller
                     'root' => $root,
                     'lvl' => $lvl,
                     'lft' => $cursus['lft'],
-                    'rgt' => $cursus['rgt']
+                    'rgt' => $cursus['rgt'],
+                    'details' => $cursus['details']
                 );
+
+                if (!isset($levelMax[$root])) {
+                    $levelMax[$root] = 0;
+                }
             } else {
                 $parentId = $cursus['parentId'];
 
@@ -74,33 +80,26 @@ class RemoteCursusController extends Controller
                     'root' => $root,
                     'lvl' => $lvl,
                     'lft' => $cursus['lft'],
-                    'rgt' => $cursus['rgt']
+                    'rgt' => $cursus['rgt'],
+                    'details' => $cursus['details']
                 );
-            }
 
-//            if (!isset($datas[$root])) {
-//                $datas[$root] = array();
-//            }
-//
-//            if (!isset($datas[$root][$lvl])) {
-//                $datas[$root][$lvl] = array();
-//            }
-//
-//            if (!isset($datas[$root][$lvl][$id])) {
-//                $datas[$root][$lvl][$id] = array(
-//                    'id' => $id,
-//                    'code' => isset($cursus['code']) ? $cursus['code'] : null,
-//                    'title' => $cursus['title'],
-//                    'blocking' => $cursus['blocking'],
-//                    'cursus_order' => $cursus['cursusOrder'],
-//                    'root' => $root,
-//                    'lvl' => $lvl,
-//                    'lft' => $cursus['lft'],
-//                    'rgt' => $cursus['rgt']
-//                );
-//            }
+                if (isset($cursus['course'])) {
+                    $cursusChildren[$parentId][$id]['course'] = $cursus['course'];
+                }
+
+                if ((isset($levelMax[$root]) && ($lvl > $levelMax[$root])) ||
+                    !isset($levelMax[$root])) {
+
+                    $levelMax[$root] = $lvl;
+                }
+            }
         }
 
-        return array('roots' => $roots, 'cursusChildren' => $cursusChildren);
+        return array(
+            'roots' => $roots,
+            'cursusChildren' => $cursusChildren,
+            'levelMax' => $levelMax
+        );
     }
 }
