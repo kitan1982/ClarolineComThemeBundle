@@ -38,7 +38,6 @@ class RemoteCursusController extends Controller
     {
         $roots = array();
         $cursusChildren = array();
-        $levelMax = array();
         $allCursus = $this->cursusApiManager->getRemoteCursus($this->campusName);
 
         foreach ($allCursus as $cursus) {
@@ -60,10 +59,6 @@ class RemoteCursusController extends Controller
                     'rgt' => $cursus['rgt'],
                     'details' => $cursus['details']
                 );
-
-                if (!isset($levelMax[$root])) {
-                    $levelMax[$root] = 0;
-                }
             } else {
                 $parentId = $cursus['parentId'];
 
@@ -87,19 +82,9 @@ class RemoteCursusController extends Controller
                 if (isset($cursus['course'])) {
                     $cursusChildren[$parentId][$id]['course'] = $cursus['course'];
                 }
-
-                if ((isset($levelMax[$root]) && ($lvl > $levelMax[$root])) ||
-                    !isset($levelMax[$root])) {
-
-                    $levelMax[$root] = $lvl;
-                }
             }
         }
 
-        return array(
-            'roots' => $roots,
-            'cursusChildren' => $cursusChildren,
-            'levelMax' => $levelMax
-        );
+        return array('roots' => $roots, 'cursusChildren' => $cursusChildren);
     }
 }
