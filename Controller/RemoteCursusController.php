@@ -56,7 +56,8 @@ class RemoteCursusController extends Controller
                     'root' => $root,
                     'lvl' => $lvl,
                     'lft' => $cursus['lft'],
-                    'rgt' => $cursus['rgt']
+                    'rgt' => $cursus['rgt'],
+                    'details' => $cursus['details']
                 );
             } else {
                 $parentId = $cursus['parentId'];
@@ -74,31 +75,14 @@ class RemoteCursusController extends Controller
                     'root' => $root,
                     'lvl' => $lvl,
                     'lft' => $cursus['lft'],
-                    'rgt' => $cursus['rgt']
+                    'rgt' => $cursus['rgt'],
+                    'details' => $cursus['details']
                 );
-            }
 
-//            if (!isset($datas[$root])) {
-//                $datas[$root] = array();
-//            }
-//
-//            if (!isset($datas[$root][$lvl])) {
-//                $datas[$root][$lvl] = array();
-//            }
-//
-//            if (!isset($datas[$root][$lvl][$id])) {
-//                $datas[$root][$lvl][$id] = array(
-//                    'id' => $id,
-//                    'code' => isset($cursus['code']) ? $cursus['code'] : null,
-//                    'title' => $cursus['title'],
-//                    'blocking' => $cursus['blocking'],
-//                    'cursus_order' => $cursus['cursusOrder'],
-//                    'root' => $root,
-//                    'lvl' => $lvl,
-//                    'lft' => $cursus['lft'],
-//                    'rgt' => $cursus['rgt']
-//                );
-//            }
+                if (isset($cursus['course'])) {
+                    $cursusChildren[$parentId][$id]['course'] = $cursus['course'];
+                }
+            }
         }
 
         return array('roots' => $roots, 'cursusChildren' => $cursusChildren);
