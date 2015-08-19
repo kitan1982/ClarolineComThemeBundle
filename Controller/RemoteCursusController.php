@@ -2,10 +2,12 @@
 
 namespace FormaLibre\ClarolineComThemeBundle\Controller;
 
+use Claroline\CoreBundle\Entity\User;
 use Claroline\CursusBundle\Manager\CursusApiManager;
 use JMS\DiExtraBundle\Annotation as DI;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration as EXT;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class RemoteCursusController extends Controller
 {
@@ -86,5 +88,24 @@ class RemoteCursusController extends Controller
         }
 
         return array('roots' => $roots, 'cursusChildren' => $cursusChildren);
+    }
+
+    /**
+     * @EXT\Route(
+     *     "/cursus/{cursusId}/hierarchy/register",
+     *     name="formalibre_claroline_com_theme_cursus_hierarchy_register",
+     *     options={"expose"=true}
+     * )
+     * @EXT\ParamConverter("authenticatedUser", options={"authenticatedUser" = true})
+     */
+    public function cursusHierarchyRegisterAction(User $authenticatedUser, $cursusId)
+    {
+        $datas = $this->cursusApiManager->registerUserToCursusHierarchy(
+            $this->campusName,
+            $authenticatedUser,
+            $cursusId
+        );
+
+        return new JsonResponse($datas, 200);
     }
 }

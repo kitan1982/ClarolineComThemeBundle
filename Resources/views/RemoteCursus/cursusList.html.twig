@@ -78,7 +78,7 @@
 {% extends 'ClarolineCoreBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="panel panel-default">
+    <div class="panel panel-default" id="cursus-list">
         <div class="panel-body">
                     
             {% for root in roots %}
@@ -107,6 +107,10 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script type="text/javascript"
+            src="{{ url('bazinga_jstranslation_js', { 'domain': 'remoteCursus' }) }}"
+    >
+    </script>
     <script src='{{ asset('bundles/formalibreclarolinecomtheme/js/cursusList.js') }}'
             type="text/javascript"
     >
