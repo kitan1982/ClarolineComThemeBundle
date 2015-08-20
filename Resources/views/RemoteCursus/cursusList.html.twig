@@ -6,11 +6,8 @@
         {% for child in children[cursusId] %}
     
             {% if child['course']['title'] is defined %}
-                <div>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
+                <div class="col-md-offset-1">
+                    <i class="fa fa-book"></i>
                     {{ child['course']['title'] }}
                 </div>
             {% else %}
