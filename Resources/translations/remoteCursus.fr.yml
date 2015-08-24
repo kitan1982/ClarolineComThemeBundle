@@ -2,12 +2,15 @@ account: Compte
 arrangement: Organisation
 blended_learning: Blended learning
 blog: Blog
+course_registration: Inscription au cours
 creation_and_usage: Création et usages
+cursus_registration: Inscription au cursus
 elearning_catalog: Catalogue E-learning
 exercises: Exercices
 forum: Forum
 learning_path: Parcours d'apprentissage
 management: Gestion
+no_description: Aucune description
 online_evaluation: Evaluation en ligne
 personal_learning_environment: Environnement d'apprentissage personnel
 platform: Plateforme
@@ -15,8 +18,6 @@ platform_and_user: Plateforme et utilisateur
 platform_home_page: Page d'accueil de la plateforme
 platform_level_roles_and_management: Rôles et gestion niveau plateforme
 portfolio: Portfolio
-register_to_cursus_confirmation_message: Êtes-vous sûr de vouloir vous inscrire à ce cursus ?
-register_to_cursus_confirmation_title: Inscription à un cursus
 resources_level: Niveau des ressources
 roles_and_users_management: Gestion des rôles et des utilisateurs
 screenwriting: Scénarisation

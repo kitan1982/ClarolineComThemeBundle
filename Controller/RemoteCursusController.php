@@ -3,6 +3,7 @@
 namespace FormaLibre\ClarolineComThemeBundle\Controller;
 
 use Claroline\CoreBundle\Entity\User;
+use Claroline\CoreBundle\Manager\OauthManager;
 use Claroline\CursusBundle\Manager\CursusApiManager;
 use JMS\DiExtraBundle\Annotation as DI;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration as EXT;
@@ -14,18 +15,25 @@ class RemoteCursusController extends Controller
     private $campusName;
     private $ch;
     private $cursusApiManager;
+    private $oauthManager;
 
     /**
      * @DI\InjectParams({
      *     "ch"               = @DI\Inject("claroline.config.platform_config_handler"),
-     *     "cursusApiManager" = @DI\Inject("claroline.manager.cursus_api_manager")
+     *     "cursusApiManager" = @DI\Inject("claroline.manager.cursus_api_manager"),
+     *     "oauthManager"     = @DI\Inject("claroline.manager.oauth_manager")
      * })
      */
-    public function __construct($ch, CursusApiManager $cursusApiManager)
+    public function __construct(
+        $ch,
+        CursusApiManager $cursusApiManager,
+        OauthManager $oauthManager
+    )
     {
         $this->campusName = $ch->getParameter('campusName');
         $this->ch = $ch;
         $this->cursusApiManager = $cursusApiManager;
+        $this->oauthManager = $oauthManager;
     }
 
     /**
@@ -40,6 +48,7 @@ class RemoteCursusController extends Controller
     {
         $roots = array();
         $cursusChildren = array();
+        $campus = $this->oauthManager->findFriendRequestByName($this->campusName);
         $allCursus = $this->cursusApiManager->getRemoteCursus($this->campusName);
 
         foreach ($allCursus as $cursus) {
@@ -83,6 +92,15 @@ class RemoteCursusController extends Controller
 
                 if (isset($cursus['course'])) {
                     $cursusChildren[$parentId][$id]['course'] = $cursus['course'];
+
+                    if (!is_null($campus) &&
+                        isset($cursus['course']['icon']) &&
+                        !empty($cursus['course']['icon'])) {
+
+                        $hostName = preg_replace('/\/(web\/)?(app_dev|app)\.php(\/)?$/', '', $campus->getHost());
+                        $cursusChildren[$parentId][$id]['course']['icon'] =
+                            $hostName . '/web/files/cursusbundle/icons/' . $cursus['course']['icon'];
+                    }
                 }
             }
         }

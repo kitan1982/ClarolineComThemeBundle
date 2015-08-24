@@ -7,8 +7,16 @@
     
             {% if child['course']['title'] is defined %}
                 <div class="col-md-offset-1">
-                    <i class="fa fa-book"></i>
-                    {{ child['course']['title'] }}
+                    <span class="register-to-course-btn pointer-hand"
+                          data-cursus-id="{{ child['id'] }}"
+                          data-cursus-title="{{ child['course']['title'] }}"
+                          data-cursus-code="{{ child['course']['code'] }}"
+                          data-cursus-description="{{ child['course']['description'] }}"
+                          {% if child['course']['icon'] is defined %}data-cursus-icon="{{ child['course']['icon'] }}"{% endif %}
+                    >
+                        <i class="fa fa-book"></i>
+                        {{ child['course']['title'] }}
+                    </span>
                 </div>
             {% else %}
                 
@@ -16,9 +24,16 @@
                     <br>
                 {% endif %}
                 <div>
-                    <b>
-                        {{ child['title'] }}
-                    </b>
+                    <span class="register-to-cursus-btn pointer-hand"
+                          data-cursus-id="{{ child['id'] }}"
+                          data-cursus-title="{{ child['title'] }}"
+                          data-cursus-code="{{ child['code'] }}"
+                          data-cursus-description="{{ child['description'] }}"
+                    >
+                        <b>
+                            {{ child['title'] }}
+                        </b>
+                    </span>
                 </div>
                 {{ _self.showSecondLevel(child, children) }}
             {% endif %}
@@ -53,7 +68,14 @@
                 >
                     <div class="panel-heading" {% if hasColor %}style="background-color: {{ color }}"{% endif %}>
                         <div class="panel-title">
-                            {{ child['title'] }}
+                            <span class="register-to-cursus-btn pointer-hand"
+                                  data-cursus-id="{{ child['id'] }}"
+                                  data-cursus-title="{{ child['title'] }}"
+                                  data-cursus-code="{{ child['code'] }}"
+                                  data-cursus-description="{{ child['description'] }}"
+                            >
+                                {{ child['title'] }}
+                            </span>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -89,7 +111,14 @@
                     <div class="panel-heading" {% if hasColor %}style="background-color: {{ color }}"{% endif %}>
                         <div class="panel-title">
                             <h3>
-                                {{ root['title'] }}
+                                <span class="register-to-cursus-btn pointer-hand"
+                                      data-cursus-id="{{ root['id'] }}"
+                                      data-cursus-title="{{ root['title'] }}"
+                                      data-cursus-code="{{ root['code'] }}"
+                                      data-cursus-description="{{ root['description'] }}"
+                                >
+                                    {{ root['title'] }}
+                                </span>
                             </h3>
                         </div>
                     </div>
@@ -98,6 +127,56 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    </div>
+
+    <div id="registration-confirmation-box" 
+         class="modal fade" 
+         role="dialog" 
+         aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="registration-confirmation-header">
+                    <button type="button"
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-hidden="true"
+                    >
+                        &times;
+                    </button>
+                    <h4 id="registration-confirmation-header-content">
+                        <span id="modal-rc-title">
+                        </span>
+                        <small>
+                            <span id="modal-rc-code">
+                            </span>
+                        </small>
+                    </h4>
+                </div>
+                <div id="registration-confirmation-body" class="modal-body">
+                    <div class="media">
+                        <div  id="modal-rc-icon"
+                              class="media-left col-md-2 text-center hidden"
+                        >
+                        </div>
+                        <div id="modal-rc-description"
+                             class="media-body col-md-10"
+                        >
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <input type="button"
+                               id="registration-confirm-btn"
+                               class="btn btn-primary"
+                               data-dismiss="modal"
+                               value="{{ 'register'|trans({}, 'platform') }}"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

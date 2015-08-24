@@ -8,6 +8,7 @@ exercises: Exercises
 forum: Forum
 learning_path: Learning path
 management: Management
+no_description: No description
 online_evaluation: Online evaluation
 personal_learning_environment: Personal learning environment
 platform: Platform
@@ -15,8 +16,6 @@ platform_and_user: Platform and user
 platform_home_page: Platform home page
 platform_level_roles_and_management: Platform-level roles and management
 portfolio: Portfolio
-register_to_cursus_confirmation_message: Are you sure you want to register to this cursus ?
-register_to_cursus_confirmation_title: Registration to cursus
 resources_level: Resources-level
 roles_and_users_management: Roles and users management
 screenwriting: Screenwriting
