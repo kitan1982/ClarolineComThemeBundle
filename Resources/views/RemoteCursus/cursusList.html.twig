@@ -14,7 +14,13 @@
                           data-cursus-description="{{ child['course']['description'] }}"
                           {% if child['course']['icon'] is defined %}data-cursus-icon="{{ child['course']['icon'] }}"{% endif %}
                     >
-                        <i class="fa fa-book"></i>
+                        {% if child['course']['icon'] is defined %}
+                            <i class="fa">
+                                <img class="media-object img-responsive" src="{{ child['course']['icon'] }}" alt="" height="20px" width="20px">
+                            </i>
+                        {% else %}
+                            <i class="fa fa-book"></i>
+                        {% endif %}
                         {{ child['course']['title'] }}
                     </span>
                 </div>

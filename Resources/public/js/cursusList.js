@@ -97,13 +97,9 @@
                 {'cursusId': currentDatas['cursus_id']}
             ),
             type: 'POST',
-            success: function () {
-                console.log('registered');
-            }
+            success: function () {}
         });
     });
-    
-    var doNothing = function () {};
     
     resizePanels();
 })();
