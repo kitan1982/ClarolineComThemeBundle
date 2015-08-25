@@ -1,0 +1,242 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="panel panel-default" id="elearning-catalog">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3>
+                    {{ 'elearning_catalog'|trans({}, 'remoteCursus') }}
+                </h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <span class="row">
+                <b>{{ 'blended_learning'|trans({}, 'remoteCursus') }}</b>
+                
+                {% if sortedCourses['blended_learning'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'blog'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation_and_usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['blog'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'account'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'management'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['account'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'rights'|trans({}, 'platform') }}</b>
+                <ul>
+                    <li>
+                        {{ 'workspace_level'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['ws_rights'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'resources_level'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['resources_rights'] is defined %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'personal_learning_environment'|trans({}, 'remoteCursus') }}</b>
+                
+                {% if sortedCourses['environment'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'teams_and_badges'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'management'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['teams_badges'] is defined %}
+                {% endif %}
+                <ul>
+                    <li>
+                        {{ 'workspace_level'|trans({}, 'remoteCursus') }}
+                    </li>
+                    <li>
+                        {{ 'resources_level'|trans({}, 'remoteCursus') }}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'workspace'|trans({}, 'platform') }}</b>
+                <ul>
+                    <li>
+                        {{ 'configuration'|trans({}, 'platform') }}
+                
+                        {% if sortedCourses['ws_config'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'roles_and_users_management'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['ws_roles_users_management'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'rights_management'|trans({}, 'platform') }}
+                
+                        {% if sortedCourses['ws_rights_management'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'personal_workspace'|trans({}, 'platform') }}
+                
+                        {% if sortedCourses['personal_ws'] is defined %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'online_evaluation'|trans({}, 'remoteCursus') }}</b>
+                
+                {% if sortedCourses['online_evaluation'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'exercises'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation'|trans({}, 'platform') }})
+                
+                {% if sortedCourses['exercises'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'forum'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation_and_usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['forum'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'social_medias'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'management'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['social_medias'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'tools'|trans({}, 'platform') }}</b>
+                ({{ 'management'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['tools'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'platform_home_page'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation'|trans({}, 'platform') }})
+                
+                {% if sortedCourses['home_page'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'platform'|trans({}, 'remoteCursus') }}</b>
+                <ul>
+                    <li>
+                        {{ 'configuration'|trans({}, 'platform') }}
+                
+                        {% if sortedCourses['platform_config'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'roles_and_users_management'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['platform_roles_users_management'] is defined %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'learning_path'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'screenwriting'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['screenwriting'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'portfolio'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['portfolio'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'resources'|trans({}, 'platform') }}</b>
+                ({{ 'arrangement'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['resources_arrangement'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'roles'|trans({}, 'platform') }}</b>
+                <ul>
+                    <li>
+                        {{ 'platform_and_user'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['platform_roles'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'workspace_and_user'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['ws_roles'] is defined %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'website'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation_and_usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['website'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'survey'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation_and_usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['survey'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'tutoring'|trans({}, 'remoteCursus') }}</b>
+                
+                {% if sortedCourses['tutoring'] is defined %}
+                {% endif %}
+            </span>
+            <span class="row">
+                <b>{{ 'users'|trans({}, 'platform') }}</b>
+                <ul>
+                    <li>
+                        {{ 'platform_level_roles_and_management'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['platform_users'] is defined %}
+                        {% endif %}
+                    </li>
+                    <li>
+                        {{ 'workspace_level_roles_and_management'|trans({}, 'remoteCursus') }}
+                
+                        {% if sortedCourses['ws_users'] is defined %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </span>
+            <span class="row">
+                <b>{{ 'wiki'|trans({}, 'remoteCursus') }}</b>
+                ({{ 'creation_and_usage'|trans({}, 'remoteCursus') }})
+                
+                {% if sortedCourses['wiki'] is defined %}
+                {% endif %}
+            </span>
+        </div>
+    </div>
+{% endblock %}

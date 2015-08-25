@@ -6,12 +6,23 @@
         {% for child in children[cursusId] %}
     
             {% if child['course']['title'] is defined %}
-                <div>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    {{ child['course']['title'] }}
+                <div class="col-md-offset-1">
+                    <span class="register-to-course-btn pointer-hand"
+                          data-cursus-id="{{ child['id'] }}"
+                          data-cursus-title="{{ child['course']['title'] }}"
+                          data-cursus-code="{{ child['course']['code'] }}"
+                          data-cursus-description="{{ child['course']['description'] }}"
+                          {% if child['course']['icon'] is defined %}data-cursus-icon="{{ child['course']['icon'] }}"{% endif %}
+                    >
+                        {% if child['course']['icon'] is defined %}
+                            <i class="fa">
+                                <img class="media-object img-responsive" src="{{ child['course']['icon'] }}" alt="" height="20px" width="20px">
+                            </i>
+                        {% else %}
+                            <i class="fa fa-book"></i>
+                        {% endif %}
+                        {{ child['course']['title'] }}
+                    </span>
                 </div>
             {% else %}
                 
@@ -19,9 +30,16 @@
                     <br>
                 {% endif %}
                 <div>
-                    <b>
-                        {{ child['title'] }}
-                    </b>
+                    <span class="register-to-cursus-btn pointer-hand"
+                          data-cursus-id="{{ child['id'] }}"
+                          data-cursus-title="{{ child['title'] }}"
+                          data-cursus-code="{{ child['code'] }}"
+                          data-cursus-description="{{ child['description'] }}"
+                    >
+                        <b>
+                            {{ child['title'] }}
+                        </b>
+                    </span>
                 </div>
                 {{ _self.showSecondLevel(child, children) }}
             {% endif %}
@@ -56,7 +74,14 @@
                 >
                     <div class="panel-heading" {% if hasColor %}style="background-color: {{ color }}"{% endif %}>
                         <div class="panel-title">
-                            {{ child['title'] }}
+                            <span class="register-to-cursus-btn pointer-hand"
+                                  data-cursus-id="{{ child['id'] }}"
+                                  data-cursus-title="{{ child['title'] }}"
+                                  data-cursus-code="{{ child['code'] }}"
+                                  data-cursus-description="{{ child['description'] }}"
+                            >
+                                {{ child['title'] }}
+                            </span>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -78,7 +103,7 @@
 {% extends 'ClarolineCoreBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="panel panel-default">
+    <div class="panel panel-default" id="cursus-list">
         <div class="panel-body">
                     
             {% for root in roots %}
@@ -92,7 +117,14 @@
                     <div class="panel-heading" {% if hasColor %}style="background-color: {{ color }}"{% endif %}>
                         <div class="panel-title">
                             <h3>
-                                {{ root['title'] }}
+                                <span class="register-to-cursus-btn pointer-hand"
+                                      data-cursus-id="{{ root['id'] }}"
+                                      data-cursus-title="{{ root['title'] }}"
+                                      data-cursus-code="{{ root['code'] }}"
+                                      data-cursus-description="{{ root['description'] }}"
+                                >
+                                    {{ root['title'] }}
+                                </span>
                             </h3>
                         </div>
                     </div>
@@ -103,10 +135,64 @@
             {% endfor %}
         </div>
     </div>
+
+    <div id="registration-confirmation-box" 
+         class="modal fade" 
+         role="dialog" 
+         aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="registration-confirmation-header">
+                    <button type="button"
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-hidden="true"
+                    >
+                        &times;
+                    </button>
+                    <h4 id="registration-confirmation-header-content">
+                        <span id="modal-rc-title">
+                        </span>
+                        <small>
+                            <span id="modal-rc-code">
+                            </span>
+                        </small>
+                    </h4>
+                </div>
+                <div id="registration-confirmation-body" class="modal-body">
+                    <div class="media">
+                        <div  id="modal-rc-icon"
+                              class="media-left col-md-2 text-center hidden"
+                        >
+                        </div>
+                        <div id="modal-rc-description"
+                             class="media-body col-md-10"
+                        >
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <input type="button"
+                               id="registration-confirm-btn"
+                               class="btn btn-primary"
+                               data-dismiss="modal"
+                               value="{{ 'register'|trans({}, 'platform') }}"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
+    <script type="text/javascript"
+            src="{{ url('bazinga_jstranslation_js', { 'domain': 'remoteCursus' }) }}"
+    >
+    </script>
     <script src='{{ asset('bundles/formalibreclarolinecomtheme/js/cursusList.js') }}'
             type="text/javascript"
     >
