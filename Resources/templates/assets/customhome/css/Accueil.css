@@ -13,3 +13,13 @@
 .first-row-text-content {
     color: #C3C3C3;
 }
+
+.carousel-indicators li {
+  background-color: #666666;
+  border-color: #666666;
+}
+
+.carousel-indicators .active {
+  background-color: #FFFFFF;
+  border-color: #5BAFDA;
+}
