@@ -2,6 +2,10 @@
     background-color: #09273C;
 }
 
+.banner-row img {
+    width: 100%;
+}
+
 .first-row, .first-row-separator {
     background-color: #09273C;
 }
