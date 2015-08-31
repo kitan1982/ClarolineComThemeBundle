@@ -1,0 +1,67 @@
+{% extends 'ClarolineCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row banner-row">
+        <img src="{{ asset('uploads/customhome/pictures/Contact/Banner.jpg') }}"
+             class="img-responsive"
+             alt="Responsive image"
+        >
+    </div>
+                 
+    <div class="row first-row">
+        <br>
+        <br>
+        <div class="col-md-3 col-md-offset-2 first-row-text">
+            <p class="first-row-text-content">
+				<br>
+                <br>
+                <img src="{{ asset('uploads/customhome/pictures/Contact/FormaLibre.png') }}"
+                     class="img-responsive"
+                     alt="LogoFormaLibre"
+                >
+				<br>
+                <br>
+				Forma-Libre S.A.<br>
+				TVA : BE 0599.995.379 <br>
+				<br>
+                <br>
+				Adresse:<br>
+				CEI (Centre d'Entreprise et d'Innovation)<br>
+				Chemin du Cyclotron 6<br>
+				1348 Louvain-la-Neuve (BE)<br>
+				<br>
+                <br>
+                <img src="{{ asset('uploads/customhome/pictures/Contact/logomail.png') }}"
+                     alt="logomail"
+                     width="30px"
+                >
+                info@claroline.com
+                <br>
+                <br>
+                <img src="{{ asset('uploads/customhome/pictures/Contact/logocall.png') }}"
+                     alt="logocall"
+                     width="30px"
+                >
+                0032(0)10/8704.94
+            </p>
+        </div>
+        <div class="col-md-4 first-row-image">
+            <img src="{{ asset('uploads/customhome/pictures/Contact/Plan.jpg') }}"
+                 class="img-responsive"
+                 alt="plan"
+            >
+        </div>
+	</div>
+    <div class="row first-row-separator">
+        <br>
+        <br>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet"
+          href="{{ asset('uploads/customhome/css/Contact.css') }}"
+          type="text/css"
+    />
+{% endblock %}

@@ -2,6 +2,10 @@
     background-color: #CAEBFA;
 }
 
+.banner-row img {
+    width: 100%;
+}
+
 .first-row, .first-row-separator {
     background-color: #CAEBFA;
 }
