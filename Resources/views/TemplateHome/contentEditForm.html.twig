@@ -1,0 +1,18 @@
+<form id="content-edit-form-{{ content.getId() }}"
+      action="{{ path('formalibre_claroline_com_theme_template_text_edit', {'type': type, 'content': content.getId()}) }}"
+      method="POST"
+      novalidate="novalidate"
+> 
+    {% form_theme form 'ClarolineCoreBundle::form_theme_no_label.html.twig' %}
+    {{ form_widget(form) }}
+
+    <br>
+    <span class="pull-right">
+        <span class="btn btn-default cancel-content-edition-btn">
+            {{ 'cancel'|trans({},'platform') }}
+        </span>
+        <button type="submit" id='edit-btn' class="btn btn-primary">
+            {{ 'ok'|trans({},'platform') }}
+        </button>
+    </span>
+</form>
